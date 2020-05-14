@@ -13,7 +13,7 @@ docker build -t weasyprint
 
 # Create an instance of the image (without actually running it)
 # this is just so we can copy the zip file out
-docker create --name weasyprint weasyprint
+docker create --name weasyprint weasyprint .
 docker cp weasyprint:/opt/weasyprint_lambda_layer.zip .
 docker rm weasyprint
 ```
